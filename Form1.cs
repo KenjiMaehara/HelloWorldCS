@@ -20,6 +20,7 @@ namespace HelloWorldCS
             InitializeComponent();
         }
 
+
         private void Button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello world");
@@ -28,15 +29,16 @@ namespace HelloWorldCS
             Console.ReadLine();
 
             //String s = textBox1.Text;
-            Char[] values = textBox1.Text.ToCharArray();
+            char[] values = textBox1.Text.ToCharArray();
         }
 
         //private static char[] testAddress;
         //private static string s = textBox1.text;
 
-        String s = textBox1.text;
+        string s = textBox1.Text;
 
-        
+
+
 
         private static async void ConnectAsTcpClient()
         {
