@@ -34,7 +34,7 @@ namespace HelloWorldCS
         //private static char[] testAddress;
         //private static string s = textBox1.text;
 
-        //String s = textBox1.text;
+        String s = textBox1.text;
 
         
 
