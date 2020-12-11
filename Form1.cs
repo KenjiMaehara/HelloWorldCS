@@ -30,7 +30,7 @@ namespace HelloWorldCS
         {
             MessageBox.Show("Hello world");
             testStr = textBox1.Text;
-            testValues = testStr.ToCharArray();
+            //testValues = testStr.ToCharArray();
 
             StartListener();
             ConnectAsTcpClient();
