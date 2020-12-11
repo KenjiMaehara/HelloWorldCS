@@ -28,7 +28,7 @@ namespace HelloWorldCS
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello world");
+            //MessageBox.Show("Hello world");
             ipadr = textBox1.Text;
             port = Convert.ToInt32(textBox2.Text);
 
