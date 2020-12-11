@@ -15,6 +15,11 @@ namespace HelloWorldCS
 {
     public partial class Form1 : Form
     {
+
+        string testStr;
+        char[] testValues;
+
+
         public Form1()
         {
             InitializeComponent();
@@ -24,19 +29,15 @@ namespace HelloWorldCS
         private void Button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello world");
+            testStr = textBox1.Text;
+            testValues = testStr.ToCharArray();
+
             StartListener();
             ConnectAsTcpClient();
             Console.ReadLine();
 
-            //String s = textBox1.Text;
-            char[] values = textBox1.Text.ToCharArray();
+
         }
-
-        //private static char[] testAddress;
-        //private static string s = textBox1.text;
-
-        string s = textBox1.Text;
-
 
 
 
@@ -44,13 +45,6 @@ namespace HelloWorldCS
         {
             using (var tcpClient = new TcpClient())
             {
-                //String s = textBox1.text;
-
-                
-
-                //testAddress = new char[128];
-                //testAddress = s
-                    //ToCharArray();
 
                 Console.WriteLine("[Client] Connecting to server");
                 await tcpClient.ConnectAsync("127.0.0.1", 1234);
