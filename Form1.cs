@@ -47,7 +47,8 @@ namespace HelloWorldCS
             {
 
                 Console.WriteLine("[Client] Connecting to server");
-                await tcpClient.ConnectAsync("127.0.0.1", 1234);
+                //await tcpClient.ConnectAsync("127.0.0.1", 1234);
+                await tcpClient.ConnectAsync(testStr, 1234);
                 Console.WriteLine("[Client] Connected to server");
                 using (var networkStream = tcpClient.GetStream())
                 {
