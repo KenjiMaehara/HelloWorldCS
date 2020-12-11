@@ -16,8 +16,8 @@ namespace HelloWorldCS
     public partial class Form1 : Form
     {
 
-        string testStr;
-        char[] testValues;
+        string ipadr;
+        int port;
 
 
         public Form1()
@@ -29,8 +29,8 @@ namespace HelloWorldCS
         private void Button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Hello world");
-            testStr = textBox1.Text;
-            //testValues = testStr.ToCharArray();
+            ipadr = textBox1.Text;
+            port = Convert.ToInt32(textBox2.Text);
 
             StartListener();
             ConnectAsTcpClient();
@@ -48,7 +48,7 @@ namespace HelloWorldCS
 
                 Console.WriteLine("[Client] Connecting to server");
                 //await tcpClient.ConnectAsync("127.0.0.1", 1234);
-                await tcpClient.ConnectAsync(testStr, 1234);
+                await tcpClient.ConnectAsync(ipadr, port);
                 Console.WriteLine("[Client] Connected to server");
                 using (var networkStream = tcpClient.GetStream())
                 {
