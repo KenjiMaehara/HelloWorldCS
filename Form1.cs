@@ -41,7 +41,7 @@ namespace HelloWorldCS
 
 
 
-        private static async void ConnectAsTcpClient()
+        private async void ConnectAsTcpClient()
         {
             using (var tcpClient = new TcpClient())
             {
